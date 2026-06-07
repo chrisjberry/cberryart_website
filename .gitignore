@@ -1,0 +1,20 @@
+# ── Ignore R Source Files & Templates ──
+index.Rmd
+template.Rmd
+make_prints_pages.R
+cberryart_ai.Rproj
+
+# ── Ignore Databases & Documentation ──
+cberryart_painting_list.xlsx
+integration_with_theprintspace.docx
+
+# ── Ignore Local Working Folders ──
+old/
+to_sort/
+useful/
+
+# ── Ignore System Clutter ──
+.Rhistory
+.Rproj.user/
+.DS_Store
+Thumbs.db
