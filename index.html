@@ -24,6 +24,7 @@
 <script src="index_files/navigation-1.1/tabsets.js"></script>
 <link href="index_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="index_files/highlightjs-9.12.0/highlight.js"></script>
+<meta name="theme-color" content="#1a1a18">
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -159,7 +160,7 @@ pre code {
 
 <style type="text/css">
 /* ── Google Fonts ── */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Courier+Prime&family=Outfit:wght@300;400&display=swap');
+@import url('[https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Courier+Prime&family=Outfit:wght@300;400&display=swap](https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Courier+Prime&family=Outfit:wght@300;400&display=swap)');
 
 /* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -359,10 +360,9 @@ h3 {
 .social-links a { color: #6b6560; }
 .social-links a:hover { color: #a09a90; }
 
-
 /* ── Studio Photo Layout ── */
 .studio-photo-container {
-  max-width: 800px; /* Wider than the text, but nested elegantly in the layout */
+  max-width: 800px;
   margin: 0 auto 4rem;
   padding: 0;
   overflow: hidden;
@@ -384,9 +384,44 @@ h3 {
   }
 }
 
+/* ── Merged Triptych Banner Layout ── */
+.triptych-banner-container {
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+  padding: 0;
+  background-color: #252520; /* Matches card background background */
+  border: 1px solid #2e2e2a; /* Sharp bounding card border box */
+  border-radius: 2px;        /* Matches card corner radius */
+  overflow: hidden;
+}
+
+.triptych-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.92) saturate(0.9);
+}
+
+.triptych-banner-caption {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;        /* Matches .card-title size */
+  font-weight: 300;          /* Matches .card-title weight */
+  text-align: center;
+  color: #d4cfc8;            /* Lighter text color matching card titles */
+  padding: 0.8rem 1rem;
+  border-top: 1px solid #2e2e2a; /* Internal border dividing image from text */
+}
 
 /* Suppress pre/code blocks from showing */
 pre { display: none !important; }
+
+
+/* Disable dragging and force mouse actions to ignore card images */
+.card-img-top, .triptych-banner-img, .studio-photo {
+  pointer-events: none !important;
+  user-select: none !important;
+  -webkit-user-drag: none !important;
+}
 </style>
 <div class="site-header">
 <div class="site-title">
@@ -412,20 +447,39 @@ nature intersects with memory and perception.</p>
 <div class="studio-photo-container">
 <p><img src="img/chris_studio.jpg" class="studio-photo" alt="Chris Berry surrounded by his paintings" /></p>
 </div>
-<div id="lost-in-the-forest-series" class="section level3">
-<h3>Lost In The Forest Series</h3>
+<h3>
+Lost In The Forest Series
+</h3>
 <div class="section-rule">
 
 </div>
+<div class="d-none d-md-block" style="margin-bottom: -1rem;">
 <div>
-<div class="row p-0 row-cols-1 row-cols-md-2 row-cols-lg-3" style="margin-left: -.2rem; margin-right: -.2rem; margin-top: 1rem; margin-bottom: 1rem; ">
+<div class="row p-0 row-cols-1" style="margin-left: -.2rem; margin-right: -.2rem; margin-top: 1rem; margin-bottom: 1rem; ">
 <div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah " style="padding: .2rem ; border-width: 0; border-radius: .6rem .6rem .6rem .6rem ;">
 <a href="prints/return_to_the_forest.html" style="color: inherit;">
-<img src="img/22_Return_To_The_Forest_45percent_cberry.png" class="card-img-top" style="border-style:solid; border-color:inherits; border-width:1px 1px 0 1px; border-radius: .6rem .6rem 0 0 ;"/>
+<img src="img/22_23_24_LostInTheForest_50per_cberry.jpg" class="card-img-top" style="border-style:solid; border-color:inherits; border-width:1px 1px 0 1px; border-radius: .6rem .6rem 0 0 ;"/>
 </a>
 <div class="card-body justify-content-end m-0 p-0" style="visibility: visible; background-color: inherits; border-style:solid; border-color:inherits; border-width:1px; border-radius: 0 0 0 0 ;">
 <a href="prints/return_to_the_forest.html">
-<h5 class="card-title my-auto px-3 pt-3 pb-3">Return To The Forest</h5>
+<h5 class="card-title my-auto px-3 pt-3 pb-3">Return To The Forest      —       Until I Open My Eyes      —       The Universe In A Droplet</h5>
+</a>
+</div>
+<div class="card-footer small text-muted px-3 py-auto" style="border-style:solid; border-color:inherits; border-width:0 1px 1px 1px; border-radius: 0 0 .6rem .6rem ;">22      —       23      —       24</div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-md-none" style="margin-bottom: -1rem;">
+<div>
+<div class="row p-0 row-cols-1 row-cols-md-2 row-cols-lg-3" style="margin-left: -.2rem; margin-right: -.2rem; margin-top: 1rem; margin-bottom: 1rem; ">
+<div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah " style="padding: .2rem ; border-width: 0; border-radius: .6rem .6rem .6rem .6rem ;">
+<a href="prints/the_universe_in_a_droplet.html" style="color: inherit;">
+<img src="img/24_The_Universe_In_A_Droplet_45percent_cberry.png" class="card-img-top" style="border-style:solid; border-color:inherits; border-width:1px 1px 0 1px; border-radius: .6rem .6rem 0 0 ;"/>
+</a>
+<div class="card-body justify-content-end m-0 p-0" style="visibility: visible; background-color: inherits; border-style:solid; border-color:inherits; border-width:1px; border-radius: 0 0 0 0 ;">
+<a href="prints/the_universe_in_a_droplet.html">
+<h5 class="card-title my-auto px-3 pt-3 pb-3">The Universe In A Droplet</h5>
 </a>
 </div>
 <div class="card-footer small text-muted px-3 py-auto" style="border-style:solid; border-color:inherits; border-width:0 1px 1px 1px; border-radius: 0 0 .6rem .6rem ;">24</div>
@@ -442,16 +496,21 @@ nature intersects with memory and perception.</p>
 <div class="card-footer small text-muted px-3 py-auto" style="border-style:solid; border-color:inherits; border-width:0 1px 1px 1px; border-radius: 0 0 .6rem .6rem ;">23</div>
 </div>
 <div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah " style="padding: .2rem ; border-width: 0; border-radius: .6rem .6rem .6rem .6rem ;">
-<a href="prints/the_universe_in_a_droplet.html" style="color: inherit;">
-<img src="img/24_The_Universe_In_A_Droplet_45percent_cberry.png" class="card-img-top" style="border-style:solid; border-color:inherits; border-width:1px 1px 0 1px; border-radius: .6rem .6rem 0 0 ;"/>
+<a href="prints/return_to_the_forest.html" style="color: inherit;">
+<img src="img/22_Return_To_The_Forest_45percent_cberry.png" class="card-img-top" style="border-style:solid; border-color:inherits; border-width:1px 1px 0 1px; border-radius: .6rem .6rem 0 0 ;"/>
 </a>
 <div class="card-body justify-content-end m-0 p-0" style="visibility: visible; background-color: inherits; border-style:solid; border-color:inherits; border-width:1px; border-radius: 0 0 0 0 ;">
-<a href="prints/the_universe_in_a_droplet.html">
-<h5 class="card-title my-auto px-3 pt-3 pb-3">The Universe In A Droplet</h5>
+<a href="prints/return_to_the_forest.html">
+<h5 class="card-title my-auto px-3 pt-3 pb-3">Return To The Forest</h5>
 </a>
 </div>
 <div class="card-footer small text-muted px-3 py-auto" style="border-style:solid; border-color:inherits; border-width:0 1px 1px 1px; border-radius: 0 0 .6rem .6rem ;">22</div>
 </div>
+</div>
+</div>
+</div>
+<div>
+<div class="row p-0 row-cols-1 row-cols-md-2 row-cols-lg-3" style="margin-left: -.2rem; margin-right: -.2rem; margin-top: 1rem; margin-bottom: 1rem; ">
 <div class="card bg-transparent m-0 border-0 collapse.show bs4cards-blahblahblah " style="padding: .2rem ; border-width: 0; border-radius: .6rem .6rem .6rem .6rem ;">
 <a href="prints/leave_a_message_at_the_beep.html" style="color: inherit;">
 <img src="img/21_Leave_A_Message_35per_cberry.png" class="card-img-top" style="border-style:solid; border-color:inherits; border-width:1px 1px 0 1px; border-radius: .6rem .6rem 0 0 ;"/>
@@ -688,7 +747,6 @@ nature intersects with memory and perception.</p>
 <p><br />
 <br />
 </p>
-</div>
 <div id="earlier-works" class="section level3">
 <h3>Earlier Works</h3>
 <div class="section-rule">
@@ -834,6 +892,19 @@ Next up: <em>Beyond The Forest</em>. Watch this space.
 © Chris Berry 2026
 </div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Target all image cards, banners, and studio photos
+  const protectedElements = document.querySelectorAll('.card, .triptych-banner-container, .studio-photo-container');
+  
+  protectedElements.forEach(function(element) {
+    element.addEventListener('contextmenu', function(e) {
+      e.preventDefault(); // Completely stops the right-click menu from appearing
+      return false;
+    });
+  });
+});
+</script>
 </div>
 
 
